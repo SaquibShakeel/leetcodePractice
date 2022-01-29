@@ -25,11 +25,11 @@ class Solution {
     }
     
     int search(int[] arr, int s, int e, int t){
-        if(s<=e){
+        while(s<=e){
             int m = s + (e - s)/2;
-            if(arr[m]==t)return m;
-            else if(arr[m]>t)return search(arr, s, m-1, t);
-            else return search(arr, m+1, e, t);
+            if(arr[m]<t)s= m+1;
+            else if(arr[m]>t)e=m-1;
+            else return m;
         }
         return -1;
     }

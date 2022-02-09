@@ -13,13 +13,6 @@ class Solution {
         return ans;
     }
     
-    // boolean search(int[] arr, int t, int skip){
-    //     for(int i=0; i<arr.length; i++){
-    //         if(arr[i] == t && i!=skip)return true;
-    //     }
-    //     return false;
-    // }
-    
     boolean search(int[] arr, int t, int skip){
         int s=0;
         int e=arr.length-1;

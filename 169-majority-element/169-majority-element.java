@@ -1,9 +1,8 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        int check = -469;
-        for(int i=0; i<(nums.length+1)/2; i++){
-            if(nums[i] != check && quantity(nums, nums[i])){
-                check = nums[i];
+        if(quantity(nums, nums[0]))return nums[0];
+        for(int i=1; i<(nums.length+1)/2; i++){
+            if(nums[i] != nums[i-1] && quantity(nums, nums[i])){
                 return nums[i];
             }
         }

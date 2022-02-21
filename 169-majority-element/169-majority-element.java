@@ -1,7 +1,7 @@
 class Solution {
     public int majorityElement(int[] nums) {
         if(quantity(nums, nums[0]) > nums.length/2)return nums[0];
-        for(int i=1; i<nums.length; i++){
+        for(int i=1; i<(nums.length+1)/2; i++){
             if(nums[i] != nums[i-1] && quantity(nums, nums[i]) > nums.length/2){
                 return nums[i];
             }

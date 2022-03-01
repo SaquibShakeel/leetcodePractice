@@ -11,7 +11,8 @@ class Solution {
         int count=0;
         while(num>0){
             count++;
-            num -= num&(-num);
+            // num -= num&(-num);
+            num = num&(num-1);
         }
         return count;
     }

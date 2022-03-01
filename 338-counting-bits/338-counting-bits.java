@@ -8,12 +8,12 @@ class Solution {
     }
     
     int lamda(int num){
-        int ans=0;
+        int count=0;
         while(num>0){
-            ans += num&1;
-            num = num>>1;
+            count++;
+            num -= num&(-num);
         }
-        return ans;
+        return count;
     }
     
 }

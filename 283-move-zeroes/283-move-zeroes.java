@@ -1,24 +1,17 @@
 class Solution {
     public void moveZeroes(int[] nums) {
-        int i=0;
+        int first=0;
         int count=0;
-        while(count < nums.length) {
-            count++;
+        for(int i=0; i<nums.length; i++) {
             if(nums[i] == 0) {
-                moveToEnd(nums, i);
+                count++;
             }
             else{
-                i++;
+                nums[first++] = nums[i];
             }
         }
-    }
-    
-    void moveToEnd(int[] arr, int m) {
-        while(m < arr.length-1) {
-            arr[m] = arr[m+1];
-            m++;
+        for(int j=1; j<=count; j++) {
+            nums[nums.length - j] = 0;
         }
-        arr[m] = 0;
     }
-    
 }

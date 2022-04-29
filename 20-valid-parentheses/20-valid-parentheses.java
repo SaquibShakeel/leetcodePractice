@@ -1,13 +1,11 @@
 class Solution {
     public boolean isValid(String s) {
         
-        // double count = 0;
         
         List<Character> c = new ArrayList<Character>();
         for(int i = 0; i < s.length(); i++) {
             if(s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '['){
                 c.add(s.charAt(i));
-                // count++;
             }
             else {
                 if(c.size() == 0) return false;

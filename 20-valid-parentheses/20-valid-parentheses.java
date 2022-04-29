@@ -1,7 +1,7 @@
 class Solution {
     public boolean isValid(String s) {
         
-        if(s.length()%2 != 0) return false;
+        // if(s.length()%2 != 0) return false;
         double count = 0;
         
         List<Character> c = new ArrayList<Character>();

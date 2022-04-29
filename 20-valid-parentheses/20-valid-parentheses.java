@@ -1,14 +1,13 @@
 class Solution {
     public boolean isValid(String s) {
         
-        // if(s.length()%2 != 0) return false;
-        double count = 0;
+        // double count = 0;
         
         List<Character> c = new ArrayList<Character>();
         for(int i = 0; i < s.length(); i++) {
             if(s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '['){
                 c.add(s.charAt(i));
-                count++;
+                // count++;
             }
             else {
                 if(c.size() == 0) return false;
@@ -26,7 +25,7 @@ class Solution {
                 }
             }
         }
-        if(c.size() != 0 && count != s.length()/2.0) return false;
+        if(c.size() != 0 ) return false;
         return true;
     }
     

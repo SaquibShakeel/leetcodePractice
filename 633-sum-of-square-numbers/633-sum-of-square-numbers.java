@@ -7,7 +7,6 @@ class Solution {
             else if(a*a + b*b < c)a++;
             else {
                 b--;
-                a--;
             }
         }
         return false;

@@ -9,7 +9,6 @@ class Solution {
             if(nums[i] == nums[j]){
                 continue;
             }
-            if(i >= nums.length)break;
             if(nums[i] - nums[j] == 1) {
                 ans[index]++;
             }else{
